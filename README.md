@@ -100,7 +100,7 @@ Here is a overview of every options possible:
 
 ## Version
 
-1.0.0
+1.0.1
 
 ## License
 
