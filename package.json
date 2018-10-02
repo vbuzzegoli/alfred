@@ -1,6 +1,6 @@
 {
   "name": "redux-alfred",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Dispatch several actions at once using Redux",
   "main": "index.js",
   "scripts": {
