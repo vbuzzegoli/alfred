@@ -1,0 +1,31 @@
+{
+  "name": "redux-alfred",
+  "version": "1.0.0",
+  "description": "Dispatch several actions at once using Redux",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vbuzzegoli/alfred.git"
+  },
+  "keywords": [
+    "alfred",
+    "modern",
+    "modular",
+    "model",
+    "middleware",
+    "4M",
+    "dispatch",
+    "multi",
+    "several",
+    "actions"
+  ],
+  "author": "Victor Buzzegoli",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vbuzzegoli/alfred/issues"
+  },
+  "homepage": "https://github.com/vbuzzegoli/alfred#readme"
+}
