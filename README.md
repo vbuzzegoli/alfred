@@ -2,7 +2,7 @@
 
 Redux Middleware to dispatch several actions at once, by [Victor Buzzegoli](https://twitter.com/victorbuzzegoli)
 
-Lightweight, Powerfull, _MMMM_ compliant (check out : [Modern Modular Middleware Model](https://github.com/vbuzzegoli/4m))
+Lightweight, Powerfull, _4M_ 1.6 compliant (check out : [Modern Modular Middleware Model](https://github.com/vbuzzegoli/4m))
 
 ## Installation
 
@@ -33,8 +33,8 @@ To start using **Alfred**, you will first need to apply the middleware to your s
         payload: 0,
         alfred: {
             actions: [
-            	{type: actions.ANOTHER_ACTION, payload: 0},
-            	{type: actions.YET_ANOTHER_ACTION, payload: 0}
+                {type: actions.ANOTHER_ACTION, payload: 0},
+                {type: actions.YET_ANOTHER_ACTION, payload: 0}
             ]
         }
     }
@@ -54,8 +54,8 @@ In `/reactions` :
 
 ```javascript
 export const customReaction = (action, next, dispatch) => {
-	console.log("Will be dispatched :", action);
-	next(action);
+    console.log("Will be dispatched :", action);
+    next(action);
 };
 ```
 
@@ -70,8 +70,8 @@ In `/actions` :
         payload: 0,
         alfred: {
             actions: [
-            	{type: actions.ANOTHER_ACTION, payload: 0},
-            	{type: actions.YET_ANOTHER_ACTION, payload: 0}
+                {type: actions.ANOTHER_ACTION, payload: 0},
+                {type: actions.YET_ANOTHER_ACTION, payload: 0}
             ]
         }
     }
@@ -100,7 +100,7 @@ Here is a overview of every options possible:
 
 ## Version
 
-1.0.1
+1.0.2
 
 ## License
 

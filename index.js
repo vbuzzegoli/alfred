@@ -17,34 +17,33 @@ const alfred = store => next => action => {
 	    // Middleware already triggered once (backward compatibility)
 	    // next(..) passes the action to the next middleware / reducer
 	    return next(action);
-	  } else {
-	    // Assigning _skip flag (backward compatibility)
-	    const newAction = clone(action);
-	    newAction.alfred._skip = true;
+	} else {
+		// Assigning _skip flag (backward compatibility)
+		const newAction = clone(action);
+		newAction.alfred._skip = true;
 
-	    // Core Process
-	   if (Array.isArray(actions)) {
-	    	// Handling each actions sequencially
-	    	actions.forEach(a => {
-	    		if (log) console.log(`[Alfred will dispatch : ${a.type}]`, a);
-	    		if (onDispatch){
-	    			return onDispatch(a, next, store.dispatch);
-	    		} else {
-	    			return store.dispatch(a);
-	    		}
-	    	});
-	    } else {
-	    	if (log) console.log(`[Alfred could not dispatch your actions] Please make sure you are using an array in "alfred.actions"`);
-	    	if (onError) {
-	    		// Custom Reaction
-	    		return onError(newAction, next, store.dispatch);
-	    	} else {
-	    		// Default
-	    		return next(newAction);
-	    	}
-	    }
-
-	  }
+		// Core Process
+		if (Array.isArray(actions)) {
+			// Handling each actions sequencially
+			actions.forEach(a => {
+				if (log) console.log(`[Alfred will dispatch : ${a.type}]`, a);
+				if (onDispatch){
+					return onDispatch(a, next, store.dispatch);
+				} else {
+					return store.dispatch(a);
+				}
+			});
+		} else {
+			if (log) console.log(`[Alfred could not dispatch your actions] Please make sure you are using an array in "alfred.actions"`);
+			if (onError) {
+				// Custom Reaction
+				return onError(newAction, next, store.dispatch);
+			} else {
+				// Default
+				return next(newAction);
+			}
+		}
+	}
 };
 
 export default alfred;
